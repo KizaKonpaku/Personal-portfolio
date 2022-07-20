@@ -1,0 +1,89 @@
+/* ==== GOOGLE FONTS ==== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* == VARIABLES CSS == */
+:root{
+
+
+
+
+    /* ==== Font and typography ==== */
+    /* .5rem = 8px | 1rem = 16px ... */
+    --body-font: 'Poppins', sans-serif;
+}
+
+/* ==== BASE ===== */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    font-family: var(--body-font);
+}
+
+/* ==== REUSABLE CSS ==== */
+
+.container{
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+/* ==== HEADER & NAV ===== */
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .6rem;
+}
+
+/* .nav-logo{
+
+}
+
+.nav-logo:hover{
+
+} */
+
+.nav-menu{
+    position: fixed;
+    bottom: 1rem;
+    background-color: red;
+    width: 90%;
+    border-radius: 4rem;
+    padding: 1rem 2.25rem;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    padding: .4rem;
+    font-size: 1.25rem;
+    display: flex;
+    border-radius: 5rem;
+}
