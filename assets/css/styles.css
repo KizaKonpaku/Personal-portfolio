@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 /* == VARIABLES CSS == */
 :root{
+    --header-height: 2rem;
 
 
 
@@ -11,6 +12,16 @@
     /* .5rem = 8px | 1rem = 16px ... */
     --body-font: 'Poppins', sans-serif;
     --body-font-alt: 'Share Tech Mono', monospace;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    
+
+    --z-fixed: 100;
 }
 
 /* ==== BASE ===== */
@@ -34,7 +45,7 @@ a {
 
 body,
 button{
-    font-family: var(--body-font);
+    font-family: var(--body-font-alt);
 }
 
 /* ==== REUSABLE CSS ==== */
@@ -54,26 +65,34 @@ button{
     padding: 4.5rem 0 1rem;
 }
 
+.section-title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 /* ==== HEADER & NAV ===== */
 .header{
     position: fixed;
     width: 100%;
+    z-index: var(--z-fixed);
 }
 
 .nav {
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: .6rem;
 }
 
-/* .nav-logo{
-
+.nav-logo{
+    font-size: 1.1rem;
+    transition: .4s;
 }
 
 .nav-logo:hover{
-
-} */
+    color: aqua;
+} 
 
 .nav-menu{
     position: fixed;
@@ -102,10 +121,42 @@ button{
 .home-container{
     position: relative;
     row-gap: 4.5rem;
-    padding-top: 2rem;
-    font-family: var(--body-font-alt);
-}
+    /* padding-top: 2rem; */
+/*     font-family: var(--body-font-alt);
+ */}
 
 .home-data{
     text-align: center;
+}
+
+.home-greeting{
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+}
+
+.home-education{
+    margin-bottom: 1.7rem;
+    font-size: var(--h3-font-size);
+}
+
+.home-name{
+    font-size: var(--biggest-font-size);
+    margin-bottom: .6rem;
+}
+
+.home-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-about{
+    margin-bottom: .7rem;
+}
+/* ==== BUTTONS ==== */
+
+.button{
+    padding: .75rem 1rem;
+    border-radius: .5rem;
 }
