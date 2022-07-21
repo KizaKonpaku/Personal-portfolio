@@ -151,8 +151,20 @@ button{
     gap: 1.5rem;
 }
 
+
 .home-about{
     margin-bottom: .7rem;
+}
+
+.home-banner{
+    
+    
+    height: 100vh;
+}
+
+.img-home{
+    width: 100%;
+    filter: opacity(0.2);
 }
 /* ==== BUTTONS ==== */
 
