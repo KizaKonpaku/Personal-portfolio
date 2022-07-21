@@ -1,6 +1,6 @@
 /* ==== GOOGLE FONTS ==== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 /* == VARIABLES CSS == */
 :root{
 
@@ -10,6 +10,7 @@
     /* ==== Font and typography ==== */
     /* .5rem = 8px | 1rem = 16px ... */
     --body-font: 'Poppins', sans-serif;
+    --body-font-alt: 'Share Tech Mono', monospace;
 }
 
 /* ==== BASE ===== */
@@ -31,7 +32,8 @@ a {
     text-decoration: none;
 }
 
-body{
+body,
+button{
     font-family: var(--body-font);
 }
 
@@ -43,6 +45,14 @@ body{
     margin-right: 1rem;
 }
 
+.grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.section {
+    padding: 4.5rem 0 1rem;
+}
 
 /* ==== HEADER & NAV ===== */
 .header{
@@ -86,4 +96,16 @@ body{
     font-size: 1.25rem;
     display: flex;
     border-radius: 5rem;
+}
+
+/* ==== HOME ===== */
+.home-container{
+    position: relative;
+    row-gap: 4.5rem;
+    padding-top: 2rem;
+    font-family: var(--body-font-alt);
+}
+
+.home-data{
+    text-align: center;
 }
