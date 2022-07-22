@@ -90,6 +90,7 @@ h1, h2, h3 {
 .section-title{
     text-align: center;
     margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
 }
 
 /* ==== HEADER & NAV ===== */
@@ -508,16 +509,17 @@ a:hover i::after{
   }
 
   .skills-title{
-    border-bottom: 3px solid #fff;
-    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 2rem;
   }
   
   .skills-title h3{
-    font-size: var(--normal-font-size);
+    font-size: var(--h3-font-size);
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
   }
   
   .skills-box{
@@ -529,35 +531,73 @@ a:hover i::after{
   .skills-group{
     display: grid;
     align-items: flex-start;
-    row-gap: 1rem;
+    row-gap: 3rem;
   }
   
   .skills-data{
-    display: flex;
-    column-gap: .5rem;
     position: relative;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
   }
-  
-  .skills .icon-skills{
-    font-size: 2rem;
-    color: #fff;
+
+  .skills-data:hover{
+    z-index: 10000;
+    transform: scale(0.90);
   }
-  .skills .icon-skills::after{
+
+  .skills-data::before{
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 36px;
-    border-left: 1px solid #fff;
+    inset: 30px;
+    box-shadow: 0 0 0 10px #fff,
+    0 0 0 20px var(--container-color),
+    0 0 0 22px #fff;
+    transition: 0.5s;
   }
+
+  .skills-data:hover::before{
+    inset: 0px;
+  }
+
+  .skills-data::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--container-color);
+    transform: rotate(45deg);
+  }
+
+  .skills-data div{
+    position: relative;
+    color: #fff;
+    z-index: 10;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .skills-data:hover div{
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 40px #fff) drop-shadow(0 0 60px #fff);
+  }
+  
+
+
+
+  .skills .icon-skills{
+    font-size: 3.5rem;
+    color: #fff;
+  }
+  
   
   .skills-name{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     line-height: 18px;
     color: #fff;
-    border-bottom: 1px solid #fff;
   }
   
   .skills-level{
