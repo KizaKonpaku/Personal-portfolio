@@ -320,3 +320,46 @@ button{
     color: #fff;
     font-size: var(--small-font-size);
   }
+
+  /* ==== SERVICES ===== */
+
+  .services-container{
+    gap: 1.5rem;
+    padding-top: 1rem;
+  }
+  
+  .services-card{
+    background-color: #222;
+    padding: 2rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  .services-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.2rem;
+    color: #fff;
+  }
+
+  .services-icon{
+    font-size: 3rem;
+    color: #fff;
+    transition: color 0.3s ease;
+    margin-bottom: .7rem;
+  }
+
+  .services .services-container .services-card:hover{
+    background: #fff;
+  }
+  .services .services-container .services-card:hover .box{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  .services .services-card:hover .services-icon,
+  .services .services-card:hover .services-title,
+  .services .services-card:hover p{
+    color: #222;
+  }
+  
+  
