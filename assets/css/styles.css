@@ -718,3 +718,142 @@ h1, h2, h3 {
     font-size: var(--small-font-size);
     line-height: 1.5rem;
   }
+
+  
+.active-portfolio{
+  background-color: var(--first-color);
+  color: var(--body-color);
+}
+
+
+/* ===== CONTACT ===== */
+
+.contact-container{
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact-title{
+  text-align: center;
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info{
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-card{
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: .75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card-icon{
+  font-size: 3rem;
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.contact-card-title,
+.contact-card-data{
+  font-size: var(--normal-font-size);
+  margin-bottom: .35rem;
+}
+
+.contact-card-title{
+  font-weight: 400;
+}
+
+.contact-card-data{
+  margin-bottom: 1rem;
+}
+
+.contact-button{
+  font-size: var(--small-font-size);
+  column-gap: .25rem;
+  margin-bottom: .25rem;
+
+}
+
+.contact-button:hover .contact-button-icon{
+  transform: translateX(.25rem);
+}
+
+.contact-button-icon{
+  transition: .4s;
+}
+
+
+/* ==== FOOTER ===== */
+
+.footer{
+  background-color: var(--first-color);
+}
+
+.footer-container{
+  padding: 2rem 0 6rem;
+}
+
+.footer-title,
+.footer-link{
+  color: var(--body-color);
+}
+
+.footer-title{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-credits{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-social{
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+
+.footer-social-link{
+  background-color: var(--body-color);
+  color: var(--first-color);
+  padding: .25rem;
+  border-radius: .25rem;
+  font-size: 1rem;
+  display: inline-flex;
+}
+
+.footer-copy{
+  display: block;
+  margin-top: 4.5rem;
+  color: var(--container-color);
+  text-align: center;
+  font-size: var(--small-font-size);
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(219, 8%, 38%);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(219, 8%, 26%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(219, 8%, 20%);
+}
