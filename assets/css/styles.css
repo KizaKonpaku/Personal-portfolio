@@ -379,7 +379,7 @@ h1, h2, h3 {
   top: -6px;
   left: 100%;
   transform: translateX(-50%);
-  width: 10px;
+  width: 40px;
   height: 10px;
   background: #222;
   border: 2px solid var(--first-color);
@@ -443,13 +443,13 @@ h1, h2, h3 {
   z-index: 1;
 }
 
-.button i {
+.button .square-button {
   position: absolute;
   inset: 0;
   display: block;
 }
 
-.button i::before{
+.button .square-button::before{
   content: '';
   position: absolute;
   top: -6px;
@@ -462,13 +462,13 @@ h1, h2, h3 {
   transition: 0.5s;
 }
 
-.button:hover i::before{
+.button:hover .square-button::before{
   left: 0%;
   transform: translateX(-50%) rotate(45deg);
   box-shadow: 40px 39px var(--first-color);
 }
 
-.button i::after{
+.button .square-button::after{
   content: '';
   position: absolute;
   bottom: -6px;
@@ -481,7 +481,7 @@ h1, h2, h3 {
   transition: 0.5s;
 }
 
-a:hover i::after{
+.button:hover .square-button::after{
   left: 100%;
   transform: translateX(-50%) rotate(-45deg);
   box-shadow: 38px -39px var(--first-color);
@@ -645,5 +645,76 @@ a:hover i::after{
   .services .services-card:hover p{
     color: #222;
   }
+
+
+  /* ===== PORTFOLIO ====== */
   
+  .portfolio-container{
+    padding-top: 1rem;
+  }
+
+  .portfolio-filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-item{
+    cursor: pointer;
+    color: var(--title-color);
+    padding: .25rem .75rem;
+    border-radius: .5rem;
+  }
+
+  .portfolio-card{
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .portfolio-img{
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+    width: 100%;
+  }
   
+  .portfolio-title {
+    font-size: var(--normal-font-size);
+    margin-bottom: .25rem;
+    font-weight: 400;
+  }
+
+  .container-portfolio-button{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+ 
+  }
+
+  .portfolio-button{
+    font-size: 0.80rem;
+    display: flex;
+  }
+
+  .portfolio-button span{
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+  }
+
+  .portfolio-button i {
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+
+  .portfolio-button:hover i{
+    transform: translateX(.45rem);
+  }
+
+  .portfolio-info{
+    font-weight: 400;
+    font-size: var(--small-font-size);
+    line-height: 1.5rem;
+  }
