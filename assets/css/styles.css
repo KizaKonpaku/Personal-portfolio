@@ -1038,19 +1038,22 @@ color: var(--body-color);
   .home-container{
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    min-height: 90vh;
+   /*  min-height: 90vh; */
   }
-  .home-info::before{
+/*   .home-info::before{
     width: 210px;
     height: 210px;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-   }
+   } */
   
    .home-data{
-    padding: 1rem 1rem 0 1.6rem;
+    padding: 5rem 1rem 0 1.6rem;
     text-align: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
    }
 
    .home-buttons{
