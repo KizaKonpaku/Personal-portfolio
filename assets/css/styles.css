@@ -30,6 +30,7 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
+    --letter-spacing: 0.1rem;
 
     /* ==== Font weight ===== */
     --font-medium: 500;
@@ -78,7 +79,7 @@ button{
 }
 
 body {
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
   color: #fff;
 }
 
@@ -101,7 +102,8 @@ h1, h2, h3 {
 }
 
 .section {
-    padding: 4.5rem 0 1rem;
+    padding: 4.5rem 0 4rem;
+   /*  background-color: var(--body-color); */
 }
 
 .main{
@@ -111,6 +113,7 @@ h1, h2, h3 {
     text-align: center;
     margin-bottom: 2rem;
     letter-spacing: 0.1rem;
+    font-weight: var(--font-medium);
 }
 
 /* ==== HEADER & NAV ===== */
@@ -148,7 +151,7 @@ h1, h2, h3 {
     position: fixed;
     bottom: 1rem;
   /*   background-color: var(--container-color); */
-    background-color: hsla(210, 5%, 29%, .8);
+    background-color: hsla(0, 0%, 11%, .8);
     width: 90%;
     border-radius: 1.7rem;
     padding: 1rem 2.25rem;
@@ -178,6 +181,7 @@ h1, h2, h3 {
             );
 box-shadow: 0 0 16px var(--first-color-alt);
 color: var(--body-color);
+transition: .3s;
 }
 
 .container-language{
@@ -193,20 +197,48 @@ color: var(--body-color);
   border: none;
 }
 
+.scroll-header{
+  box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
+/*   background-color: var(--container-color);
+ */  background: linear-gradient(180deg, var(--body-color), var(--container-color));
+
+}
+
 
 /* ==== HOME ===== */
 
+/* .home-banner{ */
+/*   width: 100%;
+  position: relative; */
+/*   background: url(../img/sl_0210121_40570_17.jpg) center;
+}
+ */
+
 .home-banner{
-  width: 100%;
-  position: relative;
+/*   background: url(../img/3467297.jpg);
+ */  background: linear-gradient(80deg, var(--body-color),  #2D2D2D);
+
+}
+/* .shape-hexagon{
+  position: absolute;
+  width: 500px;
+  height: auto;
+  z-index: 1;
+
 }
 
-.home-banner img{
-  position: absolute;
-  width: 100%;
-  height: auto;
-  z-index: -10000000;
+.hx-1{
+  left: 0;
+  top: 0;
 }
+
+.hx2{
+  left: 524px;
+  top: -6px;
+  transform: rotate(1deg);
+}
+ */
+
 
 .home-container{
     position: relative;
@@ -216,6 +248,7 @@ color: var(--body-color);
  */}
 
 .home-data{
+  position: relative;
     text-align: center;
     color: #fff;
     padding: 0 2rem;
@@ -252,6 +285,7 @@ color: var(--body-color);
 
 
  .home-right{
+  position: relative;
   row-gap: 2.5rem;
  }
 
@@ -384,7 +418,7 @@ color: var(--body-color);
 
 .button{
   position: relative;
-  background: var(--white-color);
+  background: var(--first-color);
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -395,9 +429,8 @@ color: var(--body-color);
 
 .button:hover{
   letter-spacing: 0.20em;
-  background: var(--white-color);
-  color: var(--white-color);
-  box-shadow: 0 0 35px var(--white-color);
+  background: var(--third-color);
+  color: var(--third-color);
 }
 
 .button::before{
@@ -427,14 +460,14 @@ color: var(--body-color);
   width: 10px;
   height: 10px;
   background: var(--body-color);
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--first-color);
   transition: 0.5s;
 }
 
 .button:hover .square-button::before{
   left: 0%;
   transform: translateX(-50%) rotate(45deg);
-  box-shadow: 40px 39px var(--white-color);
+  box-shadow: 40px 39px var(--third-color);
 }
 
 .button .square-button::after{
@@ -446,18 +479,19 @@ color: var(--body-color);
   width: 10px;
   height: 10px;
   background: var(--body-color);
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--first-color);
   transition: 0.5s;
 }
 
 .button:hover .square-button::after{
   left: 100%;
   transform: translateX(-50%) rotate(-45deg);
-  box-shadow: 38px -39px var(--white-color);
+  box-shadow: 38px -39px var(--third-color);
 }
 /* ==== SKILLS ==== */
 .skills{
   position: relative;
+  background-color: var(--body-color);
 }
 
 .img-skills{
@@ -576,13 +610,17 @@ color: var(--body-color);
 
   /* ==== SERVICES ===== */
 
+  .services{
+    background-color: var(--container-color);
+  }
+
   .services-container{
     gap: 1.5rem;
     padding-top: 1rem;
   }
   
   .services-card{
-    background-color: var(--container-color);
+    background-color: var(--body-color);
     padding: 2rem 1.5rem 1.5rem;
     border-radius: 1rem;
     text-align: center;
@@ -617,6 +655,10 @@ color: var(--body-color);
 
 
   /* ===== PORTFOLIO ====== */
+
+  .portfolio{
+    background-color: var(--body-color);
+  }
   
   .portfolio-container{
     padding-top: 1rem;
@@ -695,10 +737,15 @@ color: var(--body-color);
 .active-portfolio{
   background-color: var(--first-color);
   color: var(--body-color);
+  transition: .4s;
 }
 
 
 /* ===== CONTACT ===== */
+
+.contact{
+  background-color: var(--container-color);
+}
 
 .contact-container{
   row-gap: 3rem;
@@ -717,7 +764,7 @@ color: var(--body-color);
 }
 
 .contact-card{
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   padding: 1rem;
   border-radius: .75rem;
   text-align: center;
@@ -933,7 +980,7 @@ color: var(--body-color);
  
 
   .section{
-    padding: 6.5rem 0 1rem;
+    padding: 5.5rem 0 10rem;
   }
 
   .section-title{
@@ -951,6 +998,7 @@ color: var(--body-color);
   .nav-menu{
     position: initial;
     background-color: transparent;
+    backdrop-filter: blur(0px);
   }
 
   .home-container{
