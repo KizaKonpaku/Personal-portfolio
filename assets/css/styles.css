@@ -11,7 +11,7 @@
   --first-color:  #3BA9E1;
   --second-color: #0E3CBD;
   --third-color: #66fcf1;
-  --first-color-alt: #3BA9E1;
+  --first-color-alt: #5FBAE7;
   --text-color: #848484;
   --container-color: #1C1C1C ;
   --body-color:#161616;
@@ -30,7 +30,7 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
-    --letter-spacing: 0.1rem;
+    --letter-spacing: 0.06rem;
 
     /* ==== Font weight ===== */
     --font-medium: 500;
@@ -50,6 +50,7 @@
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
+    --letter-spacing: 0.1rem;
   }
 }
 
@@ -144,7 +145,7 @@ h1, h2, h3 {
 }
 
 .nav-logo:hover{
-    color: var(--second-color);
+    color: var(--first-color);
 } 
 
 .nav-menu{
@@ -251,22 +252,45 @@ transition: .3s;
   position: relative;
     text-align: center;
     color: #fff;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 .home-greeting{
+   position: relative;
     font-size: var(--h2-font-size);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-weight: var(--font-medium);
+    letter-spacing: var(--letter-spacing);
+    color: var(--white-color);
+    padding-bottom: 2rem;
+ 
 }
+
+/* .home-greeting::after{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--white-color);
+  box-shadow: 0px 0px 130px 8px var(--first-color-alt);
+} */
+
+
 
 .home-education{
     margin-bottom: 1.7rem;
     font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color-alt);
+    letter-spacing: var(--letter-spacing);
 }
 
 .home-name{
     font-size: var(--biggest-font-size);
     margin-bottom: .6rem;
+    font-weight: var(--font-semibold);
+    letter-spacing: var(--letter-spacing);
 }
 
 .home-buttons{
@@ -281,6 +305,9 @@ transition: .3s;
 .home-about{
     margin-bottom: .7rem;
     color: var(--text-color);
+    font-weight: var(--font-light);
+    font-size: var(--normal-font-size);
+   
 }
 
 
@@ -494,11 +521,6 @@ transition: .3s;
   background-color: var(--body-color);
 }
 
-.img-skills{
-  position: absolute;
-  width: 600px;
-  z-index: -2;
-}
 
 .skills-container{
     row-gap: 2rem;
@@ -519,10 +541,10 @@ transition: .3s;
   .skills-title h3{
     font-size: var(--h3-font-size);
     color: var(--white-color);
-    font-weight: 400;
+    font-weight: var(--font-medium);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    letter-spacing: var(--letter-spacing);
     margin-bottom: 1.5rem;
   }
   
@@ -624,6 +646,7 @@ transition: .3s;
     padding: 2rem 1.5rem 1.5rem;
     border-radius: 1rem;
     text-align: center;
+    letter-spacing: var(--letter-spacing);
     transition: all 0.4s ease;
   }
 
@@ -631,6 +654,7 @@ transition: .3s;
     font-size: var(--h3-font-size);
     margin-bottom: 1.2rem;
     color: #fff;
+    font-weight: var(--font-medium);
   }
 
   .services-icon{
@@ -638,6 +662,7 @@ transition: .3s;
     color: #fff;
     transition: color 0.3s ease;
     margin-bottom: .7rem;
+    font-weight: var(--font-medium);
   }
 
   .services .services-container .services-card:hover{
@@ -696,7 +721,7 @@ transition: .3s;
   .portfolio-title {
     font-size: var(--normal-font-size);
     margin-bottom: .25rem;
-    font-weight: 400;
+    font-weight: var(--font-medium);
   }
 
   .container-portfolio-button{
@@ -756,6 +781,7 @@ transition: .3s;
   text-align: center;
   font-size: var(--h3-font-size);
   margin-bottom: 1.5rem;
+  font-weight: var(--font-medium);
 }
 
 .contact-info{
@@ -776,7 +802,7 @@ transition: .3s;
 
 .contact-card-icon{
   font-size: 3rem;
-  color: var(--title-color);
+  color: var(--first-color-alt);
   margin-bottom: .25rem;
 }
 
@@ -787,11 +813,12 @@ transition: .3s;
 }
 
 .contact-card-title{
-  font-weight: 400;
+  font-weight: var(--font-light);
 }
 
 .contact-card-data{
   margin-bottom: 1rem;
+  font-weight: var(--font-light);
 }
 
 .contact-button{
@@ -824,11 +851,14 @@ transition: .3s;
 .footer-link,
 .footer-subtitle{
   color: var(--body-color);
+  letter-spacing: var(--letter-spacing);
+  transition: 0.3s;
 }
 
 .footer-title{
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: var(--font-semibold);
 }
 
 .footer-credits{
@@ -853,6 +883,17 @@ transition: .3s;
   border-radius: .25rem;
   font-size: 1rem;
   display: inline-flex;
+  transition: 0.5s;
+}
+
+
+.footer-social-link:hover{
+  background-color: var(--second-color);
+  color: var(--white-color);
+}
+
+.footer-link:hover{
+  color: var(--second-color);
 }
 
 .footer-copy{
@@ -860,7 +901,7 @@ transition: .3s;
   margin-top: 4.5rem;
   color: var(--container-color);
   text-align: center;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -1031,6 +1072,9 @@ transition: .3s;
     padding-top: 1rem;
     
    }
+   .home-greeting::after{
+    width: 21rem;
+  }
 
 
 
@@ -1078,6 +1122,9 @@ transition: .3s;
 }
 
 @media screen and (min-width: 1191px) {
+
+
+
 
   .portfolio-container{
     grid-template-columns: repeat(3, 340px);
