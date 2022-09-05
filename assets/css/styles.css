@@ -217,7 +217,7 @@ transition: .3s;
 
 .home-banner{
 /*   background: url(../img/3467297.jpg);
- */  background: linear-gradient(80deg, var(--body-color),  #2D2D2D);
+ */  background: var(--container-color);
 
 }
 /* .shape-hexagon{
@@ -258,8 +258,8 @@ transition: .3s;
 .home-greeting{
    position: relative;
     font-size: var(--h2-font-size);
-    margin-bottom: 2rem;
-    font-weight: var(--font-medium);
+/*     margin-bottom: 2rem;
+ */    font-weight: var(--font-medium);
     letter-spacing: var(--letter-spacing);
     color: var(--white-color);
     padding-bottom: 2rem;
@@ -1082,7 +1082,7 @@ transition: .3s;
   
   
    .home-data{
-    padding: 5rem 1rem 0 1.6rem;
+    padding: 2rem 1rem 0 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
