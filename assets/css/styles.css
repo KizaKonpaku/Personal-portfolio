@@ -480,7 +480,8 @@ transition: .3s;
 
 .button{
   position: relative;
-  background: var(--first-color);
+  background: var(--body-color);
+  border: 1px solid var(--first-color);
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -490,18 +491,18 @@ transition: .3s;
 }
 
 .button:hover{
-  letter-spacing: 0.20em;
-  background: var(--third-color);
+  letter-spacing: 0.15rem;
+  border: 1px solid var(--third-color);
   color: var(--third-color);
 }
 
-.button::before{
+/* .button::before{
   content: '';
   position: absolute;
   inset: 1px;
   background: var(--body-color);
 }
-
+ */
 .button span{
   position: relative;
   z-index: 1;
@@ -512,7 +513,7 @@ transition: .3s;
   inset: 0;
   display: block;
 }
-
+ 
 .button .square-button::before{
   content: '';
   position: absolute;
@@ -549,7 +550,7 @@ transition: .3s;
   left: 100%;
   transform: translateX(-50%) rotate(-45deg);
   box-shadow: 38px -39px var(--third-color);
-}
+} 
 /* ==== SKILLS ==== */
 .skills{
   position: relative;
