@@ -374,12 +374,7 @@ transition: .3s;
   background: transparent;
   transition: 0.3s;
  }
- .home-box-info:hover::before{
-  border-radius: .5rem;
-  box-shadow: 0 0 0 1px var(--white-color),
-  0 0 0 10px var(--clr),
-  0 0 0 11px var(--white-color);
- }
+
 
 
  .home-box-info .wrapper-home-info{
@@ -390,14 +385,11 @@ transition: .3s;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+  filter: drop-shadow(0 0 20px var(--clr));
   transition: 0.3s;
 }
 
- .home-box-info:hover .wrapper-home-info{
-  font-size: 3em;
-  filter: drop-shadow(0 0 30px var(--clr)) drop-shadow(0 0 50px var(--clr)) drop-shadow(0 0 70px var(--clr));
- }
+ 
 
  .about-icon{
   font-size: 4rem;
@@ -613,11 +605,11 @@ transition: .3s;
     transition: 0.5s;
   }
 
-  .skills-data:hover{
+   .skills-data:hover{
     z-index: 10000;
-    transform: scale(0.90);
-  }
-
+    transform: scale(1.20);
+    }
+/*
   .skills-data::before{
     content: '';
     position: absolute;
@@ -639,7 +631,7 @@ transition: .3s;
     background: var(--container-color);
     transform: rotate(45deg);
   }
-
+ */
   .skills-data div{
     position: relative;
     color: var(--clr);
@@ -650,7 +642,7 @@ transition: .3s;
   }
 
   .skills-data:hover div{
-    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    filter: drop-shadow(0 0 20px var(--clr));
   }
   
 
@@ -1085,17 +1077,12 @@ transition: .3s;
     backdrop-filter: blur(0px);
   }
 
-  .home-container{
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-   /*  min-height: 90vh; */
-  }
+  
 
   
   
    .home-data{
     padding: 5rem 1rem 0 1.6rem;
-    text-align: initial;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1107,10 +1094,7 @@ transition: .3s;
     column-gap: 4rem;
    }
 
-   .home-buttons{
-    justify-content: start;
-    margin-left: 1rem;
-   }
+   
 
    .home-right{
     padding-top: 1rem;
@@ -1173,6 +1157,10 @@ transition: .3s;
     padding-right: 9rem;
     column-gap: 7rem;
    
+  }
+
+  .home-about{
+    padding: 0px 15em;
   }
 
 
